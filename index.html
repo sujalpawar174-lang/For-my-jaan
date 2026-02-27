@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For My Jaan ❤️</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    background:black;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family: 'Courier New', monospace;
+    overflow:hidden;
+}
+
+.box{
+    border:2px solid white;
+    padding:40px;
+    max-width:600px;
+    text-align:center;
+    box-shadow:0 0 25px white;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow{
+    from { box-shadow:0 0 10px white; }
+    to { box-shadow:0 0 30px pink; }
+}
+
+h1{
+    color:pink;
+}
+
+.cursor{
+    display:inline-block;
+    width:10px;
+    background:white;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink{
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h1>Hey Madam ❤️</h1>
+<p id="text"></p><span class="cursor"></span>
+</div>
+
+<audio autoplay loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+var message = "Ho mi chuklo... pan ek goshta khari ahe — tu majhi ahes. \
+Tu ragavtes teva world black and white hoto, ani tu smile keli ki sagla colorful hota. \
+Attitude madhe bolto kadhi kadhi, pan heart madhe fakta tu ahes. \
+Please maaf kar na yaar... mala tujhya shivay kahi nahi vatat. ❤️";
+
+var i = 0;
+var speed = 50;
+
+function typeWriter() {
+  if (i < message.length) {
+    document.getElementById("text").innerHTML += message.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+window.onload = typeWriter;
+</script>
+
+</body>
+</html>
